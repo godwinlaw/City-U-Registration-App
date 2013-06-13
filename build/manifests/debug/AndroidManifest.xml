@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.example.cityuregistrationapp">
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16"/>
+
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <!-- Added so that only devices capable of it can see it on Google Play -->
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <!-- can opt to use getDefaultAdapter() at runtime instead -->
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+
+        <activity android:label="@string/app_name" android:name="com.example.cityuregistrationapp.LoginScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:label="@string/app_name" android:name="com.example.cityuregistrationapp.CheckInCheckOut">
+        </activity>
+
+        <activity android:label="NFC Card Reader" android:launchMode="singleInstance" android:name="com.example.cityuregistrationapp.NFCCardReader">
+            <intent-filter>
+                <action android:name="com.example.cityuregistrationapp.NFCCardReader"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_Discovered"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter"/>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+
+
+        </activity>
+    </application>
+
+</manifest>

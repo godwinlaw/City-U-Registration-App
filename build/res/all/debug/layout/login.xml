@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:background="@drawable/cityu"
+                tools:context=".Login Screen">
+
+    <LinearLayout
+            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:id="@+id/llLoginBanner"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:gravity="bottom"
+            android:id="@+id/llLoginTop">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeDADADA"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:id="@+id/llLoginMid">
+
+            <TextView
+                    android:paddingTop="10dp"
+                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvWelcomePleaseContinue"
+                    android:text="@string/welcome"
+                    android:textColor="#FF000000"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/llEmail"
+                    >
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:text="Email:"
+                        android:id="@+id/tvEmail"
+                        android:textColor="#FF000000"
+                        ></TextView>
+
+                <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textWebEmailAddress"
+                        android:id="@+id/etEmail"
+                        ></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/llEventID"
+                    >
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:text="Event ID:"
+                        android:textColor="#FF000000"
+                        android:id="@+id/tvEventID"
+                        ></TextView>
+
+                <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:inputType="textPersonName"
+                        android:id="@+id/etEventID"
+                        ></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/llDateAndTime"
+                    >
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:text="Date/Time:"
+                        android:textColor="#FF000000"
+                        android:id="@+id/tvDateAndTime"
+                        ></TextView>
+
+                <EditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="datetime"
+                        android:id="@+id/etDateAndTime"
+                        ></EditText>
+            </LinearLayout>
+
+            <TextView
+                    android:paddingTop="10dp"
+                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="#FF000000"
+                    android:id="@+id/tvWhenAttendanceEmail"
+                    android:text="@string/datetimenote"
+                    android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_height="90dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/llLoginBot"
+                android:layout_alignParentLeft="true">
+
+            <Button
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:text="Save"
+                    android:background="@drawable/ioslikebutton"
+                    android:layout_gravity="fill_horizontal"
+                    android:id="@+id/bSave"
+                    android:textColor="#415B87"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+

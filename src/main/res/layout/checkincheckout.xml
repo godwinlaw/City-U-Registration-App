@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/cityu"
+              tools:context=".CheckInCheckOut">
+
+    <LinearLayout
+            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:id="@+id/llLoginBanner"
+            android:orientation="vertical"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Event Name"
+                android:textColor="#000000"
+                android:background="#DADADA"
+                android:id="@+id/tvEventName"
+                android:padding="10dp"
+                android:enabled="true"
+                android:focusableInTouchMode="false"
+                android:layout_above="@+id/llSpace"
+                android:layout_alignLeft="@+id/llSpace"/>
+
+        <LinearLayout
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                android:id="@+id/llSpace"
+                android:orientation="vertical"
+                android:layout_above="@+id/llCheckInCheckOut"
+                android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:background="#ccffffff"
+                android:id="@+id/llCheckInCheckOut"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:text="Please Choose a Method:"
+                    android:textColor="#000000"
+                    />
+
+            <Button
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:text="Check In"
+                    android:textSize="13dp"
+                    android:textColor="#415B87"
+                    android:background="@drawable/ioslikebutton"
+                    android:padding="0dp"
+                    android:id="@+id/bCheckIn"
+                    android:layout_gravity="center"/>
+
+            <LinearLayout
+                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/llSpace"
+                    android:orientation="vertical"
+                    android:layout_above="@+id/llCheckInCheckOut"
+                    android:layout_centerHorizontal="true"/>
+
+            <Button
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:text="Check Out"
+                    android:textColor="#415B87"
+                    android:background="@drawable/ioslikebutton"
+                    android:textSize="13dp"
+                    android:id="@+id/bCheckOut"
+                    android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
